@@ -4,3 +4,6 @@
 [submodule "src/app/tests/simpletest"]
 	path = src/app/tests/simpletest
 	url = https://github.com/simpletest/simpletest.git
+[submodule "src/app/modules/navigation"]
+	path = src/app/modules/navigation
+	url = https://github.com/sleepymustache/module-navigation
