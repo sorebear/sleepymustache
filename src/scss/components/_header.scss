@@ -1,0 +1,36 @@
+.header {
+
+   &__title {
+      text-align: center;
+      position: relative;
+      background-image: linear-gradient(
+         to bottom right,
+         rgba(33, 33, 33, .7), 
+         rgba(66, 66, 66, .7)), 
+         url(../images/sleepy_koala.jpg);
+      background-size: cover;
+      background-position: center center;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+   }
+
+   input[type=checkbox] + label {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      width: 50px;
+   }
+
+   .inverted {
+      transform: rotateX(180deg);
+   }
+
+}
+
+#light-switch {
+   display: none;
+}
+

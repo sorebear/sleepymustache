@@ -1,9 +1,6 @@
 // Modules and Variables
 $desktop-breakpoint: 767px;
 
-// Base Styles
-@import 'base/base';
-
 // Modules
 @import 'modules/all';
 
@@ -11,3 +8,11 @@ $desktop-breakpoint: 767px;
 @import 'partials/structure';
 @import 'partials/forms';
 @import 'partials/navigation';
+
+// Components
+@import 'components/bottom_alert';
+@import 'components/date';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/top_nav';
+

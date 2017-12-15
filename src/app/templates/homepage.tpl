@@ -1,4 +1,5 @@
 {{ #include header }}
+	
 	{{ #each entry in teasers }}
 		<article>
 			<header>

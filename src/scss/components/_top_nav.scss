@@ -1,0 +1,29 @@
+nav.top-nav {
+
+
+   ul {
+      display: flex;
+      margin-top: 0;
+      margin-bottom: 2rem;
+
+      li {
+         width: 33.33%;
+         border: none;
+      }
+
+      a,
+      a:link,
+      a:visited {
+         border: none;
+         background-color: #008B8B;
+         padding: 1rem 0;
+         color: white;
+         width: 100%;
+      }
+
+      a:hover,
+      a:active {
+         background-color: #00CED1;
+      }
+   }
+}

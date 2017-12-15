@@ -1,15 +1,46 @@
 <?php
 	require_once(((@include_once('Webkit/init.php')) ? $docRoot : $_SERVER['DOCUMENT_ROOT']) . 'app/core/sleepy.php');
+	// include_once('app/modules/magical/magical.php');
 
 	$page = new \Sleepy\Template('homepage');
+
+	if (!isset($_GET['nighttime'])) {
+		header('Location: index.php?nighttime=false');
+	}
+	
+	if ($_GET['nighttime'] == 'true') {
+		\Sleepy\Hook::addAction('nighttime_enabled');
+	} else {
+		\Sleepy\Hook::addAction('nightime_disabled');
+	};
 
 	// SEO
 	$page->bind('title', 'Sleepy Mustache');
 	$page->bind('description', 'This is the description');
 	$page->bind('keywords', 'blog, sleepy mustache, framework');
 
-	// Content
-	$page->bind('header', 'sleepy<span>MUSTACHE</span>');
+
+	$night = $_GET['nighttime'] == 'true';
+
+	$page->bind('header', array(
+		"title" => "sleepy<span>ABOUT</span>",
+		"link" => $night ? "about.php?nighttime=false" : "about.php?nighttime=true",
+		"indexlink" => $night ? "index.php?nighttime=true" : "index.php?nighttime=false",
+		"class" => $night ? "inverted" : "",
+		"link1" => array(
+			"title" => "Testing",
+			"path" => "routes/about.php"
+		),
+		"link2" => array(
+			"title" => "Our Work",
+			"path" => "routes/work.php"
+		),
+		"link3" => array(
+			"title" => "Contact",
+			"path" => "routes/contact.php"
+		)
+	));
+
 	$page->bind('teasers', array(
 		array(
 			"title" => "Getting Started",

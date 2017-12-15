@@ -1,0 +1,24 @@
+.bottom-alert {
+   display: inline-block;
+   width: 250px;
+   background-color: tomato;
+   z-index: 1;
+   padding: 1rem 2rem;
+   border-radius: 7.5px 7.5px 0 0;
+   text-align: center;
+   position: fixed;
+   bottom: 0;
+   animation: slide-right 3s linear both;
+   backface-visibility: hidden;
+   
+   p {
+      text-transform: uppercase;
+      color: white;
+      font-size: 1.2rem;
+   }
+}
+
+@keyframes slide-right {
+   0% {left: -250px; }
+   100% {left: 100vw; }
+}

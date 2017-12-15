@@ -2,6 +2,9 @@
  * This page contains the default form styling for the site
  */
 fieldset {
+  width: 80%;
+  margin: auto;
+  text-align: center;
   border: 0;
   padding: 0;
 
@@ -13,6 +16,17 @@ fieldset {
     text-transform: capitalize;
   }
 
+  button {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    background-color: teal;
+    margin: 1rem 0;
+    color: white;
+    border: none;
+    border-radius: 3px;
+
+  }
+
   ul {
     padding-left: 0;
   }
@@ -22,16 +36,31 @@ fieldset {
     list-style: none;
     margin-left: 0;
 
-    input {
-      float: left;
-      margin: 0 0 12px;
+    input, 
+    textarea {
+      width: 100%;
+      display: block;
+      padding: 1rem;
+      border: 2px solid #555555;
+      transition: all .3s;
+      border-radius: 3px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: teal;
     }
 
     label {
       display: block;
-      float: left;
+      padding: 1rem 0;
       font-weight: bold;
-      width: 150px;
+      color: #333;
 
       &.error {
         color: $red;
